@@ -9,7 +9,7 @@ const botoes = document.querySelectorAll('.app__card-button');
 const musicaFocoInput = document.querySelector('#alternar-musica');
 const musica = new Audio('./sons/luna-rise-part-one.mp3');
 const startPauseBT = document.querySelector('#start-pause');
-let tempoDecorridoEmSegundos = 15;
+let tempoDecorridoEmSegundos = 1500;
 let intervaloID = null;
 const somDePlay = new Audio('./sons/play.wav');
 const somDePause = new Audio('./sons/pause.mp3');
@@ -31,19 +31,19 @@ musicaFocoInput.addEventListener("change", function() {
 });
 
 focoBt.addEventListener('click', () => {
-    tempoDecorridoEmSegundos = 15;
+    tempoDecorridoEmSegundos = 1500;
     alterarContexto('foco');
     focoBt.classList.add('active');
 })
 
 curtoBt.addEventListener('click', () => {
-    tempoDecorridoEmSegundos = 30;
+    tempoDecorridoEmSegundos = 300;
     alterarContexto('descanso-curto');
     curtoBt.classList.add('active'); 
 })
 
 longoBt.addEventListener('click', () => {
-    tempoDecorridoEmSegundos = 90;
+    tempoDecorridoEmSegundos = 900;
     alterarContexto('descanso-longo');
     longoBt.classList.add('active');  
 })
